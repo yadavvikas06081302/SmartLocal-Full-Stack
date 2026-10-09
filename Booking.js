@@ -1,0 +1,1 @@
+const mongoose=require("mongoose");module.exports=mongoose.model("Booking",new mongoose.Schema({customer:String,service:String,date:String,time:String,status:{type:String,default:"pending"},createdAt:{type:Date,default:Date.now}}));

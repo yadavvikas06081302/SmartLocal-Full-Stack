@@ -1,0 +1,3 @@
+const router=require("express").Router(),Booking=require("../models/Booking");
+router.post("/",async(req,res)=>{try{const b=await Booking.create(req.body);res.status(201).json({message:"Booking created",booking:b})}catch(e){res.status(400).json({message:e.message})}});
+router.get("/",async(req,res)=>{try{res.json(await Booking.find().sort({createdAt:-1}).limit(100))}catch(e){res.json([])}});module.exports=router;

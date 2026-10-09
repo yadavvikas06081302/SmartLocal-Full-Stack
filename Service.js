@@ -1,0 +1,1 @@
+const mongoose=require("mongoose");module.exports=mongoose.model("Service",new mongoose.Schema({name:String,category:String,description:String,price:Number,icon:String,provider:String,rating:{type:Number,default:4.8},verified:{type:Boolean,default:true}}));
